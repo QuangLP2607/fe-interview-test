@@ -1,0 +1,86 @@
+@use "@styles/fonts" as *;
+
+.testimonials {
+  width: 100%;
+
+  padding: 110px 0 60px;
+  background-color: #9c69e2;
+  border-radius: 50px;
+  box-sizing: border-box;
+
+  &__title {
+    margin: 0 0 100px 112px;
+    color: white;
+    font-family: $font-title;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+
+.slider {
+  padding: 60px 30px 30px 30px;
+  display: grid;
+  grid-template-columns: fit-content(200px) 1fr;
+  grid-template-rows: fit-content(100px) auto;
+  column-gap: 40px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-author {
+      font-weight: bold;
+      color: $color-secondary;
+      font-size: 1.8rem;
+    }
+
+    &-website {
+      font-size: 1.4rem;
+      color: #9c69e2;
+      margin-top: 4px;
+    }
+  }
+
+  &__image {
+    height: fit-content;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 90% / 90%;
+    border: 1px solid #555;
+  }
+
+  &__description {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1.8rem;
+    color: $color-primary;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1120px) {
+  .testimonials {
+    padding: 20px 0;
+
+    &__title {
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .slider {
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+
+    &__image {
+      height: 40px;
+    }
+
+    &__description {
+      grid-area: 2 / 1 / 3 / 3;
+      font-size: 16px;
+    }
+  }
+}

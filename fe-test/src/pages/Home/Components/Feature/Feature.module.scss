@@ -1,0 +1,103 @@
+@use "@styles/fonts.scss" as *;
+
+.feature {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 4rem;
+    margin: 0 0 49px;
+    font-family: $font-title;
+    color: $color-secondary;
+    font-weight: 700;
+  }
+
+  &__desc {
+    text-align: center;
+    margin: 0 0 98px;
+    font-family: $font-secondary;
+    color: $color-primary;
+    line-height: 160%;
+    font-size: 1.8rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 42px;
+  }
+
+  &__item {
+    padding: 30px 40px 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    &-img {
+      flex: 1;
+      width: 230px;
+    }
+
+    &-title {
+      font-size: 2.4rem;
+      font-family: $font-title;
+      color: $color-secondary;
+      font-weight: 400px;
+    }
+
+    &-desc {
+      width: 220px;
+      font-style: italic;
+      font-size: 1.6rem;
+      font-family: $font-secondary;
+      color: $color-primary;
+      line-height: 160%;
+      font-weight: 300px;
+    }
+
+    &-action {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover &-icon {
+        transform: translateX(5px);
+      }
+
+      &-text {
+        margin-right: 15px;
+        font-size: 1.6rem;
+        font-weight: 800;
+        font-family: $font-secondary;
+        color: $color-secondary;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #9c69e2;
+        }
+      }
+
+      &-icon {
+        color: #9c69e2;
+        font-size: 18px;
+        transition: transform 0.2s ease, color 0.2s ease;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .feature__item {
+    padding-right: 0;
+    gap: 0;
+    grid-column: span 2;
+    flex-direction: column;
+    background: none !important;
+  }
+}

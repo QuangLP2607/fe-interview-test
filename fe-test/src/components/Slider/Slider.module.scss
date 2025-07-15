@@ -1,0 +1,69 @@
+@use "@styles/fonts" as *;
+
+.slider {
+  padding: 30px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__btn {
+    background: none;
+    color: white;
+    font-size: 4rem;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    height: 330px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__dots {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &--active {
+      width: 1rem;
+      height: 1rem;
+      background-color: #f063b8;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .slider {
+    padding: 20px;
+
+    &__btn {
+      display: none;
+    }
+
+    &__dots {
+      margin-top: 20px;
+    }
+  }
+}

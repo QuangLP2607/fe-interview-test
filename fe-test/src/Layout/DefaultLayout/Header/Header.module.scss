@@ -1,0 +1,29 @@
+.header {
+  height: 60px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  &__logo {
+    height: 35px;
+    cursor: pointer;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    width: 100%;
+
+    &-btn {
+      width: 100%;
+      max-width: 200px;
+      min-width: 0;
+    }
+  }
+}

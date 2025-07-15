@@ -1,0 +1,177 @@
+@use "@styles/fonts" as *;
+
+.footer {
+  width: 100%;
+  max-width: 1120px;
+  margin: 48px;
+  font-family: $font-secondary;
+
+  &__container {
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+  }
+
+  //Info
+  &__info {
+    &-title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    &-address {
+      line-height: 180%;
+
+      font-weight: 500;
+      color: $color-primary;
+    }
+
+    &-contact {
+      font-style: italic;
+      font-weight: 400;
+      color: $color-primary;
+    }
+  }
+
+  //About
+  &__about {
+    &-title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      line-height: 250%;
+    }
+
+    &-link {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        color: #9c69e2;
+      }
+    }
+  }
+
+  //Help
+  &__help {
+    &-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      line-height: 250%;
+    }
+
+    &-link {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        color: #9c69e2;
+      }
+    }
+  }
+
+  //Social
+  &__social {
+    &-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      line-height: 250%;
+      display: flex;
+      gap: 14px;
+    }
+
+    &-item {
+      background-color: #e9e9ee;
+      width: 50px;
+      height: 50px;
+      border-radius: 90%;
+
+      font-size: 25px;
+
+      &:hover {
+        background-color: rgb(240, 99, 184);
+      }
+    }
+
+    &-link {
+      color: white;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+  }
+
+  //Bottom
+  &__bottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    &-copyright {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    &-chat {
+      width: 60px;
+      height: 60px;
+      border-radius: 90%;
+      background-color: #ebe1f9;
+      color: #9c69e2;
+      font-size: 30px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: font-size 0.3s ease;
+
+      &:hover {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.line {
+  width: 80%;
+  height: 2px;
+  background-color: #9c69e2;
+  opacity: 20%;
+}
+
+@media (max-width: 1120px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      row-gap: 2rem;
+    }
+  }
+}

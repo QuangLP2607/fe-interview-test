@@ -1,0 +1,15 @@
+@use "../../styles/fonts" as *;
+
+.button {
+  background-color: #9c69e2;
+  border-radius: 50px;
+  height: 60px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: #9059db;
+  }
+}
